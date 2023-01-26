@@ -43,7 +43,7 @@ INSERT INTO kelimeler VALUES
 -- Q3 : 'ho' veya 'hi' ile baslayan kelimeleri case-sensitive'e dikkat etmeksizin listele
  -- NOT: Baslangici gostermek icin ^ karakteri kullanilir.
 SELECT  kelime From kelimeler Where regexp_like(kelime,'^ho|^hi');
-
+use sys;
 -- Q4 : Sonu 't' veya 'm' ile bitenleri case-sensitive'e dikkat etmeksizin listele
     -- NOT: Bitisi gostermek icin $ karakteri kullanilir.
     SELECT  kelime From kelimeler where regexp_like(kelime,'t$|m$');

@@ -125,7 +125,7 @@ CREATE TABLE bebeler
 (
 id INT,
 isim VARCHAR(10),
-iletisim VARCHAR(10),
+iletisim VARCHAR(10),bebeler,
 CONSTRAINT bebeler_pk PRIMARY KEY (id)
 );
 CREATE TABLE notlar
