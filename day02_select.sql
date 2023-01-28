@@ -88,6 +88,10 @@ where id=114;
 /*================================== SELECT-BETWEEN =============================================
 BETWEEN iki mantiksal ifade ile tanimlayabilecegimiz durumlari tek komutla 
 yazabilme imkani verir, yazdigimiz iki sinirda araliga dahildir.
+
+-- BETWEEN command is used to select data within given range.The data can be numbers,text or dates
+-- Between command inclusive:begin and end data are included(100,200)
+
 -----Syntax-----
 SELECT field1,field2,...
 FROM table_name
@@ -99,7 +103,8 @@ FROM table_name
 WHERE field_name 
 BETWEEN deger1 OR deger2;
 =========================================================================================*/
-/*==========================AND (ve) Operatoru kullanimi==================================
+/*==========================AND KEYWORD (ve) Operatoru kullanimi==================================
+The AND command is used with WHERE to only include rows where both conditions are ture
 => And ile belirtilen sartlarin tamami gerceklesiyorsa o kayit listelenir,
 Sartlardan bir tanesi bile tutmazsa listelenmez.
 SELECT * FROM matematik WHERE sinav1 < 50 AND sinav2 < 50
@@ -185,6 +190,9 @@ FROM personel
 WHERE id= 10001 OR  10005 OR 10008  ;
 
 /*================================== SELECT-IN ===========================================
+THE IN commands allows you to specify multiple values in A WHERE  clause. 
+It is like OR command. We can select with IN multiple conditions
+
 IN birden fazla mantiksal ifade ile tanimlayabilecegimiz durumlari tek komutla yazabilme
 imkani verir. IN icerisine yazacagimiz sartlar ayni field'a ait olmali.
 -----Syntax-----
@@ -207,7 +215,11 @@ SELECT *
 FROM personel
 WHERE maas
 IN(7000,12000);
-/*================================== SELECT-LIKE =============================================
+/*================================== SELECT-LIKE ========================================
+-- The LIKE operator is used in WHERE clause to search for specified pattern in a column.
+--There are two symbol often to used with LIKE
+1-The percent sign %===>> the meaninig of this reresent to zero ,one or multiple characters
+2- The underscore sign _ represent to one,single character
 LIKE keyword sorgulama yaparken belirli patternleri kullanabilmemize olanak saglar.
 -----Syntax-----
  SELECT field1,field2,...

@@ -26,6 +26,26 @@ address varchar(100),
 last_modification date, 
 CONSTRAINT id_pk PRIMARY KEY (id) 
 );
+
+=====PRIMARY KEY
+-- Primary keys are one of the most important concepts in database table design.
+--Almost every database table should have a primary key- chosen by you from the set of candidate keys.
+--The main purpose is uniquely identifying records in a table
+-- Primary key are unique + not null
+primary key never changed 
+== FOREIGN KEY===
+FK are designed columns that point to primary key of another table
+-- A foreign key points to the primary key of another table
+--Inputs of FK must be equel to the input of the PK
+--Each value of FK must exist in PK of another table
+--FK are not actual keys
+--PK table (Referenced Table) is called parent table, FK is child table
+--CONSTRAINT + name_field ==>> when we connect two tables ,we can call by this name for all data
+
+**********
+Example: IRON(batch_id)PRIMARY KEY===>>CHAIR(batch_id)===>>SHOOPING(batch_id)==>>CUSTOMER(batch_id)
+if the chair is broken,if we have garanteed ,they can check to follow batch_id(PK)where is the problem caused .PK never changes, so we can't find where problem is
+**********
 ================================================================================================*/
 CREATE TABLE students(
 id int primary key,

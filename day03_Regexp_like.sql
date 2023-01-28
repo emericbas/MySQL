@@ -1,9 +1,14 @@
 /*==================================SELECT-REGEXP_LIKE=============================================
+--REGEXP ==>> Regular Expression is a rule defining how characters can appear in an expression.
+1-To identify the data usung combination, such as credit card numbers,emails or phone numbers
+2-To find specific text pattern or apply a filter to the text,numeric,special character data.
+3-To parse the data in ETL(EXTRACT,TRANSFORM,LOAD) by creating rules for  inbound and outbound 
+traffic and finding patterns in the code.
 
  Daha karmasik pattern ile sorgulama islemi icin REGEXP_LIKE kullanilabilir.
-  -- 'c' => case-sensitive demektir
+  -- 'c' => case-sensitive demektir, the code will pay attention to case-sensitive
   -- 'i' => case-insensitive demektir ve default case-insensitive aktiftir.
-  
+			the code will NOT  pay attention to case-sensitive
 -----Syntax-----
  SELECT sutun1,sutun2,...
  FROM tablo_adi
@@ -41,6 +46,7 @@ INSERT INTO kelimeler VALUES
  SELECT kelime FROM kelimeler WHERE REGEXP_LIKE (kelime,'ot|at','i');
  
 -- Q3 : 'ho' veya 'hi' ile baslayan kelimeleri case-sensitive'e dikkat etmeksizin listele
+-- NOTE  the meaning of the ^ sign is beginning of the data
  -- NOT: Baslangici gostermek icin ^ karakteri kullanilir.
 SELECT  kelime From kelimeler Where regexp_like(kelime,'^ho|^hi');
 use sys;

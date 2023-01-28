@@ -1,13 +1,14 @@
--- Yorum satiri
+-- Yorum satiri===> This is for comment line
 -- bu da 2. yorum satiri
 
 /*
-yorum 
+yorum  This is also comment paragraph
 paragrafi
 ornegi
 */
 USE sys;   -- use istedigin kadar calistirilabilir
-
+-- NOTE= firstly we should select to do work place and database
+-- NOTE= If you would like to use different database ,we should use ===> CREATE DATABASE nameOfTheDataBase
 
 /*========================================
     TABLO OLUSTURMA 1 (CRUD - Create)
