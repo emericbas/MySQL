@@ -1,5 +1,6 @@
 /* ====================================== UPDATE ========================================
 Tabloda varolan herhangi bir record'a ait verinin degistirilmesi icin kullanilir.
+If we would like to update data(assign a new data), we are usiing UPDATE command
 -----Syntax-----
 UPDATE table_name
 SET field1=''

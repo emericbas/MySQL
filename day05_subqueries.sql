@@ -1,5 +1,7 @@
 use sys;
 /*================================= SUBQUERY =================================
+A subguery is a SQL query nested inside a larger query.
+
 	Sorgu icinde calisan sorguya SUBQUERY (ALT SORGU) denir.
 ============================================================================*/
 CREATE TABLE personel
@@ -51,8 +53,8 @@ where sirket IN ('Ford','Toyota');
 select isim,sirket
 from personel
 where sirket IN (select sirket 
-from sirketler
-where personel_sayisi >15000); -- bu dekilde komutumuz dinamik oldu
+				from sirketler
+				where personel_sayisi >15000); -- bu dekilde komutumuz dinamik oldu
 
 -- Honda sirketinin personel sayisini 16000 olarak guncelleyiniz
 update sirketler
@@ -99,6 +101,7 @@ from sirketler
   
 => Interview Question : Subquery'i Select satirinda kullanirsaniz ne ile 
 kullanmaniz gerekir?====>AGGREGATE FUNCTION 
+If you use it in the subquery SELECT line , what should use it with?===>>AGGREGATE FUNCTION 
 =========================================================================*/
 /*----------------------------------------------------------------
  SORU 1- Her sirketin ismini, personel sayisini ve personelin 
