@@ -9,6 +9,8 @@ WHERE kosul;
 -- SELECT -- hangi sutunlari(field) getirsin
 -- FROM -- hangi tablodan(table) getirsin
 -- WHERE -- hangi satirlari(record) getirsin
+
+SELECT DISTINCT is used to return only different values .Duplicate'lerden sadece birini getirir
 =========================================================================================*/
 CREATE TABLE meslek_lisesi (
 okul_no CHAR(4) UNIQUE,

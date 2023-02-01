@@ -6,7 +6,15 @@ UPDATE table_name
 SET field1=''
 WHERE condition;
 
-COALESCE is used for the multiple update data
+---COALESCE ----
+Coalesce is used for multiple update data .
+---syntax---
+UPDATE table_name
+SET 
+field1=COALESCE(field1,''),
+field2=COALESCE(field2,''),
+field3=COALESCE(field3,''),
+
 ========================================================================================*/
 /*--------------------------------------------------------------------------------------
 1) Bir firmalar tablosu olusturun icinde id,
@@ -42,10 +50,3 @@ update firmalar set iletisim_isim='Osman Can' where isim='ACB';
 
 -- Osman Can'i Ayse Can yapalim
 update firmalar set iletisim_isim='Ayse Can' where iletisim_isim='Osman Can';
-
---  iletisim_isim ve isim 'de beraber degisiklik yaptik
-update firmalar
-set
-  iletisim_isim=COALESCE (iletisim_isim,'Ayse Can'),
-isim=COALESCE (isim,'Ayse Han');
-

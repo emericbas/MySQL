@@ -3,6 +3,7 @@ EXISTS Condition subquery'ler ile kullanilir. IN ifadesinin kullanimina
 benzer olarak, EXISTS ve NOT EXISTS ifadeleri de alt sorgudan getirilen 
 degerlerin icerisinde bir degerin olmasi veya olmamasi durumunda islem 
 yapilmasini saglar.
+EXISTS is faster than IN
 ======================================================================*/
 use sys;
 CREATE TABLE mayis_satislar
@@ -111,7 +112,12 @@ field sirasini da yazabiliriz.
  ORDER BY (field_name) yazmak yeterlidir.
 => Isimleri ters siralama ile yazdirmak isterseniz DESC yaziyoruz.
 => Ayni degerde olan kayitlari, tablodaki kayit sirasina gore getirir.FirstInFirstOut===FIFO
-==============================================================*/
+
+The ORDER BY command is used to sort the result_set in ascending or descending order
+The ORDER BY command is used with only SELECT
+
+
+===========================================================*/
 CREATE TABLE insanciklar
 (
 ssn char(9),

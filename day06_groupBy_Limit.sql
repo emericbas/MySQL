@@ -1,7 +1,15 @@
 /* ======================== ALIASES ===========================
    Aliases kodu ile tablo yazdirilirken, field isimleri sadece
    o cikti icin degistirilebilir.Tabloda degismeyip, gecici olarak yazdirirken degistirebiliriz
+   
+   SQL ALIIASES are used to give a table , or column in a table ,a temprorary name
+   Aliases are often used to make column names or more readable
+   An aliases only exist for the duration of that query
+   An aliases is created with the AS keyword. 
 ===============================================================*/
+-- Change the name of  employee_id with 'worker_id'
+SELECT employee_id AS worker_id FROM employees;
+
 use sys;
 CREATE TABLE employees
 (
@@ -23,6 +31,19 @@ INSERT INTO employees VALUES(345678901, 'Mine Bulut', 'Izmir');
    GROUP BY komutu her grup basina bir satir dondurur.
    
    GROUP BY AGGREGATE fonksiyonlariyla birlikte kullanilir.
+   
+   ORDER BY command is used to sort the result-set in ascending or descending order
+   ORDER BY command is used with only SELECT
+   GROUP BY statements groups rows that have the same values into summary rows 
+   for example  "find the number of customers in each country"
+    GROUP BY is often used with aggregate functions(count(),max(),min(),sum(),avg())
+    ---syntax----
+     SELECT column_name(s)
+     FROM table_name
+     WHERE condition
+     GROUP BY column_name(s)
+     ORDER BY column_name(s)
+    
 ======================================================================*/  
 CREATE TABLE manav (
     isim VARCHAR(50),
@@ -58,7 +79,7 @@ from manav
 GROUP BY isim
 ORDER BY isim desc;
 
--- 3: bunlari bir de toplam kiloya gore siralayiniz
+-- 3: bunlari bir de toplam kiloya gore siralayiniz(WITH RESPECT TO KG)
 SELECT isim, SUM(urun_miktar) AS top_kg
 FROM manav
 GROUP BY isim
@@ -113,3 +134,8 @@ from manav
 where urun_adi like'____'
 group by urun_adi
 order by urun_adi;
+-- special question is not related this table
+-- 10) Find the total price who bought fruit with respect to the fruit name
+select fruit_name, sum(price*kg) as pound
+from market
+group by fruit_name;

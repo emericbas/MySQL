@@ -42,7 +42,7 @@ INSERT INTO kelimeler VALUES
 	-- NOT: VEYA islemi icin | karakteri kullanilir.
     SELECT kelime FROM kelimeler WHERE REGEXP_LIKE (kelime,'ot|at','c');
 
--- Q2 : Icerisinde 'ot' veya 'at' bulunan kelimeleri case-sensitive'e dikkat etmeksizin listele
+-- Q2 : Icerisinde 'ot' veya 'at' bulunan kelimeleri case-sensitive'e dikkat etmekspersonelizin listele
  SELECT kelime FROM kelimeler WHERE REGEXP_LIKE (kelime,'ot|at','i');
  
 -- Q3 : 'ho' veya 'hi' ile baslayan kelimeleri case-sensitive'e dikkat etmeksizin listele
@@ -86,3 +86,4 @@ WHERE REGEXP_LIKE (kelime, '^.[O][a-zA-Z]$','c');
 
     -- Q7 : 2. ve 3. harfi o olan tum kelimeleri (case sensitive olmaksizin) listeleyiniz
   select kelime from kelimeler where regexp_like(kelime,'[a-zA-Z0-9]OO[a-zA-Z0-9]');
+ drop table isciler;

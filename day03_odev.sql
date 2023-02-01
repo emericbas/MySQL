@@ -50,9 +50,9 @@ select okul_no,isim from lise where derece>90;
 select derece from lise where isim='Tugay Kala';
 -- Q5 : Istanbulda yasayan ogrencilerin isimlerini listeleyin.
 select isim from lise where adres='Istanbul';
-
-
-
+use sys;
+drop table isciler;
+select * from isciler;
 
 
 
