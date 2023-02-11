@@ -78,6 +78,9 @@ having max_maas>5000;
 iki sayi gireriz, ancak bu sayilardan ilki baslangic noktamizi 
 ifade ederken ikincisi kac kayit getirecegimizi belirtir. Baslangic 
 noktasi dahil edilmez!
+
+-- LIMIT is used to list a specific part of the rows given in the table
+-- Listing the number of records we use after the LIMIT command
 =========================================*/
 -- 1) Isciler tablosundan ilk 5 kaydi getiriniz
 select* from isciler limit 5;

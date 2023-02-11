@@ -15,6 +15,7 @@ use sys;
     mySQL'de 3 Cesit Join islemi kullanilabilmektedir.
     
     1) INNER JOIN:  Tablolardaki ortak olan sonuc kumesini gosterir = Kesisim kumesi
+    
     2) LEFT JOIN:  Ilk tabloda (Sol) olan sonuclari gosterir
     3) RIGHT JOIN:  Ikinci tabloda (Sag) olan tum sonuclari gosterir
       
@@ -43,7 +44,7 @@ CREATE TABLE sirketler
     INSERT INTO siparisler VALUES(55, 105, '2020-04-21');
     
     /*=============================== INNER JOIN  ==================================
-    
+    -- is used to retrive the matching records from two or more tables based on the specified conditions
     Iki tablonun kesisim kumesi ile yeni bir tablo olusturmak icin kullanilir.
     
     1) Select'ten sonra tabloda gormek istediginiz sutunlari yazarken
